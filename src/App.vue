@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <FeedItem />
+    <FeedItem /> -->
+
+    <router-link to="/">Home</router-link>
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import Feed from "./components/Feed.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    // Feed
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+<style lang="scss">
+// import fontawesome cdn link for icons
+@import "https://use.fontawesome.com/releases/v5.0.9/css/all.css";
+
+// variables
+$primary-color: #2c3e50;
+
+// body styles
+body {
+  background-color: #eee;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: $primary-color;
+}
+#app {
+  margin: 60px auto 0 auto;
+  width: 300px;
 }
 </style>
