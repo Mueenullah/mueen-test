@@ -7,6 +7,8 @@ Vue.use(VueRouter);
 const router = new VueRouter({ routes });
 Vue.config.productionTip = false;
 
+import "./assets/scss/main.scss";
+
 new Vue({
   render: h => h(App),
   router

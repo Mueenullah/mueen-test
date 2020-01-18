@@ -1,6 +1,6 @@
 <template>
     <div id="profile">
-        user Id is {{ $route.params.userId}}
+        user Id is {{ $route.params.id}}
     </div>
 </template>
 <script>

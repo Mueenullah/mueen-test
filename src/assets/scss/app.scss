@@ -1,0 +1,13 @@
+// body styles
+body {
+    background-color: #eee;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $primary-color;
+  }
+  #app {
+    margin: 60px auto 0 auto;
+    width: 300px;
+  }
+  

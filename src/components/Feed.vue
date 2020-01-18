@@ -1,27 +1,35 @@
 <template>
   <div id="feed">
-    <FeedItem />
-    <FeedItem />
-
+    <FeedItem v-for="item in feed" :key="item.id" :feeditem="item" />
     <router-view />
   </div>
 </template>
 
 <script>
 import FeedItem from "./FeedItem.vue";
+import axios from "axios";
 
 export default {
-  name: "app",
+  data() {
+    return {
+      feed: [],
+      error: ""
+    };
+  },
   components: {
     FeedItem
+  },
+  mounted() {
+    axios
+      .get(
+        "https://my-json-server.typicode.com/Mueenullah/JsonFakeApi/feedItems"
+      )
+      .then(response => {
+        this.feed = response.data;
+      })
+      .catch(e => {
+        this.error = e.message;
+      });
   }
 };
 </script>
-
-<style lang="scss">
-// feed styles
-#feed {
-  margin: 60px auto 0 auto;
-  width: 300px;
-}
-</style>

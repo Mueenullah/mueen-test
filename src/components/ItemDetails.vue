@@ -1,6 +1,6 @@
 <template>
   <div id="feed-item-details">
-    product Id is {{ $route.params.itemId }}
+    product Id is {{ $route.params.id }}
   </div>
 </template>
 
